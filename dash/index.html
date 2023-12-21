@@ -1,0 +1,965 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.png">
+
+    <title>Dashboard</title>
+    
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="template/vertical/src/css/vendors_css.css">
+	  
+	<!-- Style-->  
+	<link rel="stylesheet" href="template/vertical/src/css/style.css">
+	<link rel="stylesheet" href="template/vertical/src/css/skin_color.css">
+     
+  </head>
+
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
+	
+<div class="wrapper">
+	<div id="loader"></div>
+	
+  <header class="main-header">
+	<div class="d-flex align-items-center logo-box justify-content-start">	
+		<!-- Logo -->
+		<a href="index.html" class="logo">
+		  <!-- logo-->
+		 
+		  <div class="logo-lg">
+			  <img src="images/logo.png" alt="logo">
+		  </div>
+		</a>	
+	</div>   
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+	  <div class="app-menu">
+		<ul class="header-megamenu nav">
+			<li class="btn-group nav-item">
+				<a href="#" class="waves-effect waves-light nav-link push-btn btn-primary-light ms-0" data-toggle="push-menu" role="button">
+					<i data-feather="menu"></i>
+			    </a>
+			</li>
+		</ul> 
+	  </div>
+		
+      <div class="navbar-custom-menu r-side">
+        <ul class="nav navbar-nav">
+			<li class="btn-group d-md-inline-flex d-none">
+              <a href="javascript:void(0)" title="skin Change" class="waves-effect skin-toggle waves-light">
+			  	<label class="switch">
+					<input type="checkbox" data-mainsidebarskin="toggle" id="toggle_left_sidebar_skin">
+					<span class="switch-on"><i data-feather="moon"></i></span>
+					<span class="switch-off"><i data-feather="sun"></i></span>
+				</label>
+			  </a>				
+            </li>
+			<li class="dropdown notifications-menu btn-group">
+				<a href="#" class="waves-effect waves-light btn-primary-light svg-bt-icon bg-transparent" data-bs-toggle="dropdown" title="Notifications">
+					<i data-feather="bell"></i>
+					<div class="pulse-wave"></div>
+			    </a>
+				<ul class="dropdown-menu animated bounceIn">
+				  <li class="header">
+					<div class="p-20">
+						<div class="flexbox">
+							<div>
+								<h4 class="mb-0 mt-0">Notifications</h4>
+							</div>
+						</div>
+					</div>
+				  </li>
+				  <li>
+					<!-- inner menu: contains the actual data -->
+					<ul class="menu sm-scrol">
+					  <li>
+						<a href="#">
+						  <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc suscipit blandit.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu sapien elementum, in semper diam posuere.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor commodo porttitor pretium a erat.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et nisi
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero dictum fermentum.
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
+						</a>
+					  </li>
+					  <li>
+						<a href="#">
+						  <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam interdum, at scelerisque ipsum imperdiet.
+						</a>
+					  </li>
+					</ul>
+				  </li>
+				</ul>
+			</li>
+			<li class="btn-group nav-item d-xl-inline-flex d-none">
+				<a href="#" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="" id="live-chat">
+					<i data-feather="message-circle"></i>
+			    </a>
+			</li>
+			
+			
+			<li class="btn-group nav-item d-xl-inline-flex d-none">
+				<a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon" title="Full Screen">
+					<i data-feather="maximize"></i>
+			    </a>
+			</li>
+			
+			<!-- User Account-->
+			<li class="dropdown user user-menu">
+				<a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent p-0 no-shadow" title="User" data-bs-toggle="modal" data-bs-target="#quick_user_toggle">
+					<div class="d-flex pt-1 align-items-center">
+						<div class="text-end me-10">
+							<p class="pt-5 fs-14 mb-0 fw-700">Nil Yeager</p>
+							<small class="fs-10 mb-0 text-uppercase text-mute">Admin</small>
+						</div>
+						<img src="images/avatar/avatar-13.png" class="avatar rounded-circle bg-primary-light h-40 w-40" alt="" />
+					</div>
+				</a>
+			</li>		  
+          <!-- Control Sidebar Toggle Button -->
+          <li class="btn-group nav-item d-xl-inline-flex d-none">
+              <a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light nav-link btn-primary-light svg-bt-icon me-0">
+			  	<i data-feather="sliders"></i>
+			  </a>
+          </li>
+			
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar position-relative"> 
+	  	<div class="multinav">
+		  <div class="multinav-scroll" style="height: 97%;">	
+			  <!-- sidebar menu-->
+			  <ul class="sidebar-menu" data-widget="tree">	
+				<li>
+				  <a href="index.html"><i data-feather="home"></i><span>Dashboard</span></a>
+				</li>
+				<li>
+				  <a href="extra_calendar.html"><i data-feather="command"></i><span>Calendar</span></a>
+				</li>			  
+						
+				<li class="">
+				  <a href="charts_chartjs.html">
+					<i data-feather="pie-chart"></i>
+					<span>Course statistics</span>
+					
+				  </a>
+				</li>				 
+				<li>
+				  <a href="contact_app.html">
+					<i data-feather="database"></i>
+					<span>Students</span>
+					
+				  </a>
+				</li>		 	     
+			  </ul>
+			  
+			  <div class="sidebar-widgets">
+				  <div class="mx-25 mb-30 pb-20 side-bx bg-primary-light rounded20">
+					<div class="text-center">
+						<img src="images/svg-icon/color-svg/custom-24.svg" class="sideimg p-5" alt="">
+						<h4 class="title-bx text-primary">Best Education Admin</h4>
+					</div>
+				  </div>
+			  </div>
+		  </div>
+		</div>
+    </section>
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Main content -->
+		<section class="content">
+			<div class="row align-items-center">
+				<div class="col-xl-9 col-12">
+					<div class="box bg-success">
+						<div class="box-body d-flex p-0">
+							<div class="flex-grow-1 p-30 flex-grow-1 bg-img bg-none-md" style="background-position: right bottom; background-size: auto 100%; background-image: url(images/svg-icon/color-svg/custom-30.svg)">
+								<div class="row">
+									<div class="col-12 col-xl-7">
+										<h1 class="mb-0 fw-600">Learn With Effectively With Us!</h1>
+										<p class="my-10 fs-16 text-white-70">Get 30% off every course on january.</p>
+										<div class="mt-45 d-md-flex align-items-center">
+											<div class="me-30 mb-30 mb-md-0">
+												<div class="d-flex align-items-center">
+													<div class="me-15 text-center fs-24 w-50 h-50 l-h-50 bg-danger b-1 border-white rounded-circle">
+														<i class="fa fa-graduation-cap"></i>
+													</div>
+													<div>
+														<h5 class="mb-0">Students</h5>
+														<p class="mb-0 text-white-70">75,000+</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="d-flex align-items-center">
+													<div class="me-15 text-center fs-24 w-50 h-50 l-h-50 bg-warning b-1 border-white rounded-circle">
+														<i class="fa fa-user"></i>
+													</div>
+													<div>
+														<h5 class="mb-0">Expert Mentors</h5>
+														<p class="mb-0 text-white-70">200+</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-xl-5"></div>
+								</div>
+							</div>
+						</div>
+					</div>										
+				</div>
+				<div class="col-xl-3 col-12">
+					
+					<div class="row">
+						<div class="col-6">
+							<a class="box box-link-shadow text-center pull-up" href="javascript:void(0)">
+								<div class="box-body py-5 bg-primary-light px-5">
+									<p class="fw-500 text-primary text-overflow">Courses in Progress</p>
+								</div>
+								<div class="box-body p-10">
+									<h1 class="countnm fs-40 m-0">5</h1>
+								</div>
+							</a>
+						</div>
+						<div class="col-6">
+							<a class="box box-link-shadow text-center pull-up" href="javascript:void(0)">
+								<div class="box-body py-5 bg-primary-light px-5">
+									<p class="fw-500 text-primary text-overflow">Forum Discussion</p>
+								</div>
+								<div class="box-body p-10">
+									<h1 class="countnm fs-40 m-0">25</h1>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-12">
+					<div class="box no-shadow mb-0 bg-transparent">
+						<div class="box-header no-border px-0">
+							<h3 class="fw-500 box-title">Popular Courses</h3>							
+							<div class="box-controls pull-right d-md-flex d-none">
+							  <a href="course.html">All Courses</a>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15 bg-warning h-50 w-50 l-h-55 rounded text-center">
+											<span class="fs-24">U</span>
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="course.html" class="text-dark hover-warning mb-1 fs-16">UI/UX Design</a>
+											<span class="text-fade">30+ Courses</span>
+										</div>
+									</div>
+									
+									<div class="d-flex align-items-center">
+										<a href="course.html" class="waves-effect waves-light btn btn-sm btn-warning-light me-10">View Courses</a>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15 bg-danger h-50 w-50 l-h-55 rounded text-center">
+											<span class="fs-24">M</span>
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="course.html" class="text-dark hover-danger mb-1 fs-16">Marketing</a>
+											<span class="text-fade">25+ Courses</span>
+										</div>
+									</div>
+									
+									<div class="d-flex align-items-center">
+										<a href="course.html" class="waves-effect waves-light btn btn-sm btn-danger-light me-10">View Courses</a>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15 bg-success h-50 w-50 l-h-55 rounded text-center">
+											<span class="fs-24">W</span>
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="course.html" class="text-dark hover-success mb-1 fs-16">Web Dev.</a>
+											<span class="text-fade">30+ Courses</span>
+										</div>
+									</div>
+									
+									<div class="d-flex align-items-center">
+										<a href="course.html" class="waves-effect waves-light btn btn-sm btn-success-light me-10">View Courses</a>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15 bg-primary h-50 w-50 l-h-55 rounded text-center">
+											<span class="fs-24">M</span>
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="course.html" class="text-dark hover-primary mb-1 fs-16">Mathematics</a>
+											<span class="text-fade">50+ Courses</span>
+										</div>
+									</div>
+									
+									<div class="d-flex align-items-center">
+										<a href="course.html" class="waves-effect waves-light btn btn-sm btn-primary-light me-10">View Courses</a>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-12">
+					<div class="box no-shadow mb-0 bg-transparent">
+						<div class="box-header no-border px-0">
+							<h3 class="fw-500 box-title">Current Activity</h3>	
+						</div>
+					</div>
+					<div class="box">
+						<div class="box-body pb-0">
+							<div class="mb-15 w-p100 d-flex align-items-center justify-content-between">
+								<div>									
+									<h3 class="my-0">Monthly Progress</h3>
+									<p class="mb-0 text-fade">This is the latest Improvement</p>
+								</div>
+								<div class="input-group w-auto">
+								  <button type="button" class="btn btn-primary-light btn-circle" id="daterange-btn">
+									  <p><i class="fa fa-calendar"></i></p>
+								  </button>
+								</div>
+							</div>
+							<div id="charts_widget_2_chart"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-7">
+							<div class="box bg-warning">
+								<div class="box-body">									
+									<h2 class="my-0 fw-600 text-white">450K+</h2>
+									<p class="mb-10 text-white-80">Completed Course</p>
+									<div class="d-flex align-items-center justify-content-between">
+										<p class="mb-0 text-white-70">This is the latest Data</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-5">
+							<div class="box bg-danger">
+								<div class="box-body">									
+									<h2 class="my-0 fw-600 text-white">200K+</h2>
+									<p class="mb-10 text-white-80">Video Course</p>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-12">
+					<div class="box no-shadow mb-0 bg-transparent">
+						<div class="box-header no-border px-0">
+							<h3 class="fw-500 box-title">Best Instructors</h3>							
+							
+						</div>
+					</div>
+					<div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15 mb-1">
+											<img src="images/avatar/avatar-1.png" class="bg-primary-light avatar avatar-lg rounded-circle" alt="">
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="extra_profile.html" class="text-dark hover-primary mb-1 fs-16">Nil Yeager</a>
+											<span class="text-fade">5 Design Course</span>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15 mb-1">
+											<img src="images/avatar/avatar-2.png" class="bg-primary-light avatar avatar-lg rounded-circle" alt="">
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="extra_profile.html" class="text-dark hover-primary mb-1 fs-16">Theron Trump</a>
+											<span class="text-fade">5 Design Course</span>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15" style="margin-bottom: 1px;">
+											<img src="images/avatar/avatar-3.png" class="bg-primary-light avatar avatar-lg rounded-circle" alt="">
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="extra_profile.html" class="text-dark hover-primary mb-1 fs-16">Tyler Mark</a>
+											<span class="text-fade">5 Design Course</span>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>
+						<div class="box mb-15 pull-up">
+							<div class="box-body">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="d-flex align-items-center">
+										<div class="me-15">
+											<img src="images/avatar/avatar-4.png" class="bg-primary-light avatar avatar-lg rounded-circle" alt="">
+										</div>
+										<div class="d-flex flex-column fw-500">
+											<a href="extra_profile.html" class="text-dark hover-primary mb-1 fs-16">Johen Mark</a>
+											<span class="text-fade">5 Design Course</span>
+										</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-xl-6 col-12">
+					<div class="box">
+						<div class="box-header no-border">
+							<h3 class="box-title">Top 5 Courses Performance</h3>
+						</div>
+						<div class="box-body">
+							<div id="performance_chart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-12">
+					<div class="box">
+						<div class="box-header no-border">
+							<h3 class="box-title">Overall Pass Percentage</h3>
+						</div>
+						<div class="box-body" style="min-height: 275px;">
+							<div id="pass_chart"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-12">
+					<div class="box">
+						<div class="box-header no-border">
+							<h3 class="box-title">Content Usage</h3>
+						</div>
+						<div class="box-body text-center pt-60">
+							<p class="text-primary">12.5% higher than last month</p>
+							<div id="usage_chart"></div>
+						</div>
+					</div>
+				</div>				
+				<div class="col-xl-8 col-12">
+					<div class="row">						
+						<div class="col-xl-5 col-lg-6 col-12">
+							<div class="box">
+								<div class="box-header no-border">
+									<h3 class="box-title">Course completion</h3>
+									<ul class="box-controls pull-right d-md-flex d-none">
+									  <li>
+										<a href="course.html" class="btn btn-primary-light px-10 base-font">View All</a>
+									  </li>
+									</ul>
+								</div>
+								<div class="box-body">
+									<div class="mb-25">
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="w-p85">
+												<div class="progress progress-sm mb-0">
+													<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+													</div>
+												</div>
+											</div>
+											<div>
+												<div>40%</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-center justify-content-between">
+											<p class="mb-0 text-primary">In Progress</p>
+											<p class="text-fade mb-0">117 User</p>
+										</div>
+									</div>
+									<div class="mb-25">
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="w-p85">
+												<div class="progress progress-sm mb-0">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+													</div>
+												</div>
+											</div>
+											<div>
+												<div>20%</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-center justify-content-between">
+											<p class="mb-0 text-primary">Completed</p>
+											<p class="text-fade mb-0">74 User</p>
+										</div>
+									</div>
+									<div class="mb-25">
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="w-p85">
+												<div class="progress progress-sm mb-0">
+													<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100" style="width: 18%">
+													</div>
+												</div>
+											</div>
+											<div>
+												<div>18%</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-center justify-content-between">
+											<p class="mb-0 text-primary">Inactive</p>
+											<p class="text-fade mb-0">58 User</p>
+										</div>
+									</div>
+									<div class="mb-25">
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="w-p85">
+												<div class="progress progress-sm mb-0">
+													<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100" style="width: 7%">
+													</div>
+												</div>
+											</div>
+											<div>
+												<div>07%</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-center justify-content-between">
+											<p class="mb-0 text-primary">Expeired</p>
+											<p class="text-fade mb-0">11 User</p>
+										</div>
+									</div>
+									<div class="mb-25">
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="w-p85">
+												<div class="progress progress-sm mb-0">
+													<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+													</div>
+												</div>
+											</div>
+											<div>
+												<div>40%</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-center justify-content-between">
+											<p class="mb-0 text-primary">In Progress</p>
+											<p class="text-fade mb-0">117 User</p>
+										</div>
+									</div>
+									<div class="mb-20">
+										<div class="d-flex align-items-center justify-content-between">
+											<div class="w-p85">
+												<div class="progress progress-sm mb-0">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+													</div>
+												</div>
+											</div>
+											<div>
+												<div>20%</div>
+											</div>
+										</div>
+										<div class="d-flex align-items-center justify-content-between">
+											<p class="mb-0 text-primary">Completed</p>
+											<p class="text-fade mb-0">74 User</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-7 col-lg-6 col-12">
+							<div class="box bg-transparent no-shadow mb-30">
+								<div class="box-header no-border pb-0">
+									<h3 class="box-title">Upcoming Courses</h3>
+									<ul class="box-controls pull-right d-md-flex d-none">
+									  <li>
+										<a href="course.html" class="btn btn-primary-light px-10 base-font">View All</a>
+									  </li>
+									</ul>
+								</div>
+							</div>
+							<div class="box mb-15 pull-up">
+								<div class="box-body">
+									<div class="d-flex align-items-center justify-content-between">
+										<div class="d-flex align-items-center">
+											<div class="me-15 bg-warning h-50 w-50 l-h-68 rounded text-center">
+												<span class="icon-Book-open fs-24"><span class="path1"></span><span class="path2"></span></span>
+											</div>
+											<div class="d-flex flex-column fw-500">
+												<a href="course.html" class="text-dark hover-primary mb-1 fs-16">Informatic Course</a>
+												<span class="text-fade">Nil Yeager, 19 April</span>
+											</div>
+										</div>
+										<a href="course.html">
+											<span class="icon-Arrow-right fs-24"><span class="path1"></span><span class="path2"></span></span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="box mb-15 pull-up">
+								<div class="box-body">
+									<div class="d-flex align-items-center justify-content-between">
+										<div class="d-flex align-items-center">
+											<div class="me-15 bg-primary h-50 w-50 l-h-68 rounded text-center">
+												<span class="icon-Mail fs-24"></span>
+											</div>
+											<div class="d-flex flex-column fw-500">
+												<a href="course.html" class="text-dark hover-primary mb-1 fs-16">3D Course</a>
+												<span class="text-fade">Micak Doe, 12 June</span>
+											</div>
+										</div>
+										<a href="course.html">
+											<span class="icon-Arrow-right fs-24"><span class="path1"></span><span class="path2"></span></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>								
+					</div>
+				</div>
+				<div class="col-xl-4 col-12">
+					<div class="box">
+						<div class="box-header no-border">
+							<h3 class="box-title">Notice board</h3>
+						</div>
+						<div class="box-body p-0">
+							<div class="act-div">
+							  <div class="media-list media-list-hover">
+								<div class="media bar-0">
+								  <span class="avatar avatar-lg bg-primary-light rounded"><i class="fa fa-user"></i></span>
+								  <div class="media-body">
+									<p class="d-flex align-items-center justify-content-between">
+									  <a class="hover-success fs-16" href="#">New Teacher</a>
+									  <span class="text-fade fs-12">Just Now</span>
+									</p>
+									<p class="text-fade">It is a long established fact that a reader will be<span class="d-xxxl-inline-block d-none"> distracted by the readable</span>...</p>
+								  </div>
+								</div>
+
+								<div class="media bar-0">
+								  <span class="avatar avatar-lg bg-danger-light rounded"><i class="fa fa-money"></i></span>
+								  <div class="media-body">
+									<p class="d-flex align-items-center justify-content-between">
+									  <a class="hover-success fs-16" href="#">New Fees Structure</a>
+									  <span class="text-fade fs-12">Today</span>
+									</p>
+									<p class="text-fade">It is a long established fact that a reader will be<span class="d-xxxl-inline-block d-none"> distracted by the readable</span>...</p>
+								  </div>
+								</div>
+
+
+								<div class="media bar-0">
+								  <span class="avatar avatar-lg bg-info-light rounded"><i class="fa fa-graduation-cap"></i></span>
+								  <div class="media-body">
+									<p class="d-flex align-items-center justify-content-between">
+									  <a class="hover-success fs-16" href="#">New Course</a>
+									  <span class="text-fade fs-12">27 Oct 2020</span>
+									</p>
+									<p class="text-fade">It is a long established fact that a reader will be<span class="d-xxxl-inline-block d-none"> distracted by the readable</span>...</p>
+								  </div>
+								</div>
+
+
+							  </div>
+							</div>
+						</div>
+					</div>
+				  </div>
+			</div>
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+	
+  <footer class="main-footer">
+    <div class="pull-right d-none d-sm-inline-block">
+        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+		  <li class="nav-item">
+			<a class="nav-link" href="#" target="_blank">Purchase Now</a>
+		  </li>
+		</ul>
+    </div>
+	  &copy; <script>document.write(new Date().getFullYear())</script>  All Rights Reserved.
+  </footer>
+  <!-- Side panel -->   
+  <!-- quick_user_toggle -->
+  <div class="modal modal-right fade" id="quick_user_toggle" tabindex="-1">
+	  <div class="modal-dialog">
+		<div class="modal-content slim-scroll3">
+		  <div class="modal-body p-30 bg-white">
+			<div class="d-flex align-items-center justify-content-between pb-30">
+				<h4 class="m-0">User Profile</h4>
+				<a href="#" class="btn btn-icon btn-danger-light btn-sm no-shadow" data-bs-dismiss="modal">
+					<span class="fa fa-close"></span>
+				</a>
+			</div>
+            <div>
+                <div class="d-flex flex-row">
+                    <div class=""><img src="images/avatar/avatar-13.png" alt="user" class="rounded bg-danger-light w-150" width="100"></div>
+                    <div class="ps-20">
+                        <h5 class="mb-0">Nil Yeager</h5>
+                        <p class="my-5 text-fade">Manager</p>
+                        <a href="mailto:example@gmail.com"><span class="icon-Mail-notification me-5 text-success"><span class="path1"></span><span class="path2"></span></span> example@gmail.com</a>
+                    </div>
+                </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+  </div>
+  <!-- /quick_user_toggle --> 
+    
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar">
+	  
+	<div class="rpanel-title"><span class="pull-right btn btn-circle btn-danger" data-toggle="control-sidebar"><i class="ion ion-close text-white" ></i></span> </div>  <!-- Create the tabs -->
+    <ul class="nav nav-tabs control-sidebar-tabs">
+      <li class="nav-item d-none"><a href="#control-sidebar-home-tab" data-bs-toggle="tab"></a></li>
+      <li class="nav-item"><a href="#control-sidebar-settings-tab" data-bs-toggle="tab"><i class="mdi mdi-playlist-check"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+          <div class="flexbox">
+			<a href="javascript:void(0)" class="text-grey">
+				<i class="ti-more"></i>
+			</a>	
+			<p>Users</p>
+			<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
+		  </div>
+		  <div class="lookup lookup-sm lookup-right d-none d-lg-block">
+			<input type="text" name="s" placeholder="Search" class="w-p100">
+		  </div>
+          <div class="media-list media-list-hover mt-20">
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>			
+			
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-success" href="#">
+				<img src="images/avatar/1.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
+				</p>
+				<p>Praesent tristique diam...</p>
+				  <span>Just now</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-danger" href="#">
+				<img src="images/avatar/2.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
+				</p>
+				<p>Cras tempor diam ...</p>
+				  <span>33 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-warning" href="#">
+				<img src="images/avatar/3.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+
+			<div class="media py-10 px-0">
+			  <a class="avatar avatar-lg status-primary" href="#">
+				<img src="images/avatar/4.jpg" alt="...">
+			  </a>
+			  <div class="media-body">
+				<p class="fs-16">
+				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
+				</p>
+				<p>In posuere tortor vel...</p>
+				  <span>42 min ago</span>
+			  </div>
+			</div>
+			  
+		  </div>
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+          <div class="flexbox">
+				
+			<p>Todo List</p>
+		  </div>
+		  <ul class="todo-list mt-20">
+			<li class="py-15 px-5 by-1">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_1" class="filled-in">
+			  <label for="basic_checkbox_1" class="mb-0 h-15"></label>
+			  <!-- todo text -->
+			  <span class="text-line">Check the students</span>
+			  <!-- Emphasis label -->
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+			  <!-- General tools such as edit or delete-->
+			 
+			</li>
+			<li class="py-15 px-5">
+			  <!-- checkbox -->
+			  <input type="checkbox" id="basic_checkbox_2" class="filled-in">
+			  <label for="basic_checkbox_2" class="mb-0 h-15"></label>
+			  <span class="text-line">Evaluate students</span>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+			 
+			</li>
+		  </ul>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>	
+	
+</div>
+<!-- ./wrapper -->
+	
+			
+	<!-- Page Content overlay -->
+	
+	
+	<!-- Vendor JS -->
+	<script src="template/vertical/src/js/vendors.min.js"></script>
+	
+    <script src="assets/icons/feather-icons/feather.min.js"></script>
+	
+	<script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+	<script src="assets/vendor_components/moment/min/moment.min.js"></script>
+	<script src="assets/vendor_components/bootstrap-daterangepicker/daterangepicker.js"></script>	
+	
+	<!-- edulearn App -->
+	<script src="template/vertical/src/js/demo.js"></script>
+	<script src="template/vertical/src/js/template.js"></script>
+	<script src="template/vertical/src/js/pages/dashboard.js"></script>
+	
+</body>
+</html>
